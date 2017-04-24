@@ -10,6 +10,7 @@ namespace Fibonacci
         {
             yield return 1;
             yield return 1;
+            yield return 2;
         }
 
         IEnumerator IEnumerable.GetEnumerator()

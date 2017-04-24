@@ -22,5 +22,13 @@ namespace Fibonacci.Tests
             var result = seq.ElementAt(1);
             Assert.AreEqual(1, result);
         }
+
+        [Test]
+        public void FibonacciSequence_ThirdElement_IsTwo()
+        {
+            var seq = new FibonacciSequence();
+            var result = seq.ElementAt(2);
+            Assert.AreEqual(2, result);
+        }
     }
 }
