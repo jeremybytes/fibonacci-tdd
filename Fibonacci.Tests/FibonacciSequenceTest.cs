@@ -25,5 +25,14 @@ namespace Fibonacci.Tests
             var result = seq.ElementAt(n);
             Assert.AreEqual(expected, result);
         }
+
+        [Test]
+        public void FibonacciSequence_DoesNotOverflowAtElement46()
+        {
+            var seq = new FibonacciSequence();
+            var value46 = seq.ElementAt(45);
+            var value47 = seq.ElementAt(46);
+            Assert.Greater(value47, value46);
+        }
     }
 }
