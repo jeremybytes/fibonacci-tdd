@@ -9,8 +9,10 @@ namespace Fibonacci
         public IEnumerator<int> GetEnumerator()
         {
             yield return 1;
-            yield return 1;
-            yield return 2;
+            for (int i = 1; true; i++)
+            {
+                yield return i;
+            }
         }
 
         IEnumerator IEnumerable.GetEnumerator()
