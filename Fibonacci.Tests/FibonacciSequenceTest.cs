@@ -12,6 +12,13 @@ namespace Fibonacci.Tests
         [TestCase(2,2)]
         [TestCase(3,3)]
         [TestCase(4,5)]
+        [TestCase(5,8)]
+        [TestCase(6,13)]
+        [TestCase(7,21)]
+        [TestCase(8,34)]
+        [TestCase(9,55)]
+        [TestCase(10,89)]
+        [TestCase(11,144)]
         public void FibonacciSequence_Element_IsValue(int n, int expected)
         {
             var seq = new FibonacciSequence();
