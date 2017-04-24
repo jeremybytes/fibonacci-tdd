@@ -10,6 +10,7 @@ namespace Fibonacci.Tests
         [TestCase(0,1)]
         [TestCase(1,1)]
         [TestCase(2,2)]
+        [TestCase(3,3)]
         public void FibonacciSequence_Element_IsValue(int n, int expected)
         {
             var seq = new FibonacciSequence();
