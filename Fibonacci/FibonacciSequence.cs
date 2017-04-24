@@ -4,17 +4,17 @@ using System.Collections.Generic;
 
 namespace Fibonacci
 {
-    public class FibonacciSequence : IEnumerable<int>
+    public class FibonacciSequence : IEnumerable<long>
     {
-        public IEnumerator<int> GetEnumerator()
+        public IEnumerator<long> GetEnumerator()
         {
             yield return 1;
 
-            int previous = 0;
-            int current = 1;
+            long previous = 0;
+            long current = 1;
             while (true)
             {
-                int next = previous + current;
+                long next = previous + current;
                 previous = current;
                 current = next;
                 yield return current;

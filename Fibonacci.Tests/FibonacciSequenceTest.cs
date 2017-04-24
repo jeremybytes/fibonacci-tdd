@@ -19,7 +19,7 @@ namespace Fibonacci.Tests
         [TestCase(9,55)]
         [TestCase(10,89)]
         [TestCase(11,144)]
-        public void FibonacciSequence_Element_IsValue(int n, int expected)
+        public void FibonacciSequence_Element_IsValue(int n, long expected)
         {
             var seq = new FibonacciSequence();
             var result = seq.ElementAt(n);
