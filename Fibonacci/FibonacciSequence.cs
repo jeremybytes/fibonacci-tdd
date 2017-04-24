@@ -4,8 +4,16 @@ using System.Collections.Generic;
 
 namespace Fibonacci
 {
-    public class FibonacciSequence
+    public class FibonacciSequence : IEnumerable<int>
     {
+        public IEnumerator<int> GetEnumerator()
+        {
+            yield return 1;
+        }
 
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 }
