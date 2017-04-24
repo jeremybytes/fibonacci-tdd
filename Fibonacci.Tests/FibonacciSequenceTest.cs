@@ -19,7 +19,7 @@ namespace Fibonacci.Tests
         public void FibonacciSequence_SecondElement_IsOne()
         {
             var seq = new FibonacciSequence();
-            var result = seq.Take(2).Last();
+            var result = seq.ElementAt(1);
             Assert.AreEqual(1, result);
         }
     }
