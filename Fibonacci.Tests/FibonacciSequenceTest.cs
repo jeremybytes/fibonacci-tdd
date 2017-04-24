@@ -7,28 +7,14 @@ namespace Fibonacci.Tests
     {
         // 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144
 
-        [Test]
-        public void FibonacciSequence_FirstElement_IsOne()
+        [TestCase(0,1)]
+        [TestCase(1,1)]
+        [TestCase(2,2)]
+        public void FibonacciSequence_Element_IsValue(int n, int expected)
         {
             var seq = new FibonacciSequence();
-            var result = seq.First();
-            Assert.AreEqual(1, result);
-        }
-
-        [Test]
-        public void FibonacciSequence_SecondElement_IsOne()
-        {
-            var seq = new FibonacciSequence();
-            var result = seq.ElementAt(1);
-            Assert.AreEqual(1, result);
-        }
-
-        [Test]
-        public void FibonacciSequence_ThirdElement_IsTwo()
-        {
-            var seq = new FibonacciSequence();
-            var result = seq.ElementAt(2);
-            Assert.AreEqual(2, result);
+            var result = seq.ElementAt(n);
+            Assert.AreEqual(expected, result);
         }
     }
 }
