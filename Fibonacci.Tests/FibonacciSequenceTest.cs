@@ -14,5 +14,13 @@ namespace Fibonacci.Tests
             var result = seq.First();
             Assert.AreEqual(1, result);
         }
+
+        [Test]
+        public void FibonacciSequence_SecondElement_IsOne()
+        {
+            var seq = new FibonacciSequence();
+            var result = seq.Take(2).Last();
+            Assert.AreEqual(1, result);
+        }
     }
 }
