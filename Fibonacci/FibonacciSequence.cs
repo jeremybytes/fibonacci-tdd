@@ -8,12 +8,12 @@ namespace Fibonacci
     {
         public IEnumerator<long> GetEnumerator()
         {
-            var value = (0L, 1L);
+            var value = (current: 0L, next: 1L);
 
             while (true)
             {
-                value = (value.Item2, value.Item1 + value.Item2);
-                yield return value.Item1;
+                value = (value.next, value.current + value.next);
+                yield return value.current;
             }
         }
 
