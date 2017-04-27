@@ -14,9 +14,16 @@ namespace Fibonacci
             long current = 1;
             while (true)
             {
-                long next = previous + current;
-                previous = current;
-                current = next;
+                try
+                {
+                    long next = checked(previous + current);
+                    previous = current;
+                    current = next;
+                }
+                catch (OverflowException)
+                {
+                    break;
+                }
                 yield return current;
             }
         }
